@@ -24,10 +24,10 @@ public class Permutation {
 	}
 	
 	public static void permutation(char[] perm, int pos, String str) {
-	    if (pos == perm.length) {
+	    if(pos == perm.length){
 	    	permutations.add(new String(perm));
-	    } else {
-	        for (int i = 0 ; i < str.length() ; i++) {
+	    }else{
+	        for(int i = 0 ; i < str.length() ; i++){
 	            perm[pos] = str.charAt(i);
 	            permutation(perm, pos+1, str);
 	        }
@@ -52,6 +52,6 @@ public class Permutation {
 			return null;
 		}
 		
-		return "good";
+		return x;
 	}
 }
