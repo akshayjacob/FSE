@@ -18,12 +18,12 @@ public class Permutation {
 			check = checkX(check);
 			
 			for(int j = 0; j < permutations.size() - 1; j++){
-				
+				check = checkDuplicates(permutations.get(i), permutations.get(j));
 			}
-			
-			if(!(check == null)){
-				System.out.println(permutations.get(i));
-			}
+			System.out.println(check);
+//			if(!(check == null)){
+//				System.out.println(permutations.get(i));
+//			}
 			
 		}  
 	}
@@ -57,7 +57,7 @@ public class Permutation {
 			return null;
 		}
 		
-		return "good";
+		return x;
 	}
 	
 	public static String checkDuplicates(String string1, String string2){
