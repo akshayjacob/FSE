@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Permutation {
 	
@@ -15,6 +16,10 @@ public class Permutation {
 			
 			check = moveX(check);
 			check = checkX(check);
+			
+			for(int j = 0; j < permutations.size() - 1; j++){
+				
+			}
 			
 			if(!(check == null)){
 				System.out.println(permutations.get(i));
@@ -53,5 +58,26 @@ public class Permutation {
 		}
 		
 		return "good";
+	}
+	
+	public static String checkDuplicates(String string1, String string2){
+		if((string1 == null) || (string2 == null)){
+			return string1;
+		}else{
+			char[] chars1 = string1.toCharArray();
+			char[] chars2 = string2.toCharArray();
+			
+			Arrays.sort(chars1);
+			Arrays.sort(chars2);
+			
+			String sorted1 = new String(chars1);
+			String sorted2 = new String(chars1);
+			
+			if(sorted1.equals(sorted2)){
+				return null;
+			}else{
+				return string1;
+			}
+		}
 	}
 }

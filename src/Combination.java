@@ -1,10 +1,15 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Combination {
 	static ArrayList<String> permutations = new ArrayList<String>();
 	
 	public static void main (String[] args){
-		
+		String original = "edcba";
+        char[] chars = original.toCharArray();
+        Arrays.sort(chars);
+        String sorted = new String(chars);
+        System.out.println(sorted);
 	}
 	
 	public static String moveX(String lineln){
